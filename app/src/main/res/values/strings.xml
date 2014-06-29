@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wear Todo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_login"> g+ Login</string>
+    <string name="btn_logout">g+ Logout</string>
+    <string name="btn_revoke">g+ Revoke Access</string>
+    <string name="title_activity_todo">TodoActivity</string>
+    <string name="add_todo">Add Todo</string>
+    <string name="i_have">I have to...</string>
+    <string name="title">Title</string>
+    <string name="is_due">Is due...</string>
+    <string name="create_todo">Create Todo</string>
+
+</resources>

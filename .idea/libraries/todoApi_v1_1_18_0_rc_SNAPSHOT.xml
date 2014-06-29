@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="todoApi-v1-1.18.0-rc-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/gabilheri/backend/todoApi/v1-1.18.0-rc-SNAPSHOT/todoApi-v1-1.18.0-rc-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/gabilheri/backend/todoApi/v1-1.18.0-rc-SNAPSHOT/todoApi-v1-1.18.0-rc-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
