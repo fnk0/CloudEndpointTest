@@ -13,23 +13,12 @@ buildscript {
     }
 }
 
-repositories {
-    mavenCentral();
-}
-
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'appengine'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
-
-dependencies {
-    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.4'
-    compile 'com.google.appengine:appengine-endpoints:1.9.4'
-    compile 'com.google.appengine:appengine-endpoints-deps:1.9.4'
-    compile 'javax.jdo:jdo-api:3.1-rc1'
-}
 
 appcfg {
     oauth2 = true
@@ -44,4 +33,11 @@ appengine {
     getClientLibsOnBuild = true
     getDiscoveryDocsOnBuild = true
   }
+}
+
+dependencies {
+    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.4'
+    compile 'com.google.appengine:appengine-endpoints:1.9.4'
+    compile 'com.google.appengine:appengine-endpoints-deps:1.9.4'
+    compile 'javax.jdo:jdo-api:3.1-rc1'
 }

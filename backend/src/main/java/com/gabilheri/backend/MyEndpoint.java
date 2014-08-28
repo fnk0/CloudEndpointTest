@@ -11,7 +11,7 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Transaction;
-
+import javax.jdo.PersistenceManager;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -29,12 +29,13 @@ public class MyEndpoint {
     public static final String DUE_AT = "dueAt";
     public static final String USER_EMAIL = "userEmail";
 
+
     @ApiMethod(name = "storeTodo")
     public void storeTodo(TodoBean todoBean) {
         DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
         Transaction txn = datastoreService.beginTransaction();
-        try {
 
+        try {
             Key taskBeanParentKey = KeyFactory.createKey(TODO_PARENT_KEY, TODO);
             Entity taskEntity = new Entity(TODO_BEAN, todoBean.getId(), taskBeanParentKey);
             taskEntity.setProperty(TITLE, todoBean.getTitle());
@@ -53,6 +54,9 @@ public class MyEndpoint {
 
     @ApiMethod(name = "getTodo")
     public List<TodoBean> getTodo() {
+
+        PersistenceManager mngr;
+
         DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
         Key taskBeanParentKey = KeyFactory.createKey(TODO_PARENT_KEY, TODO);
         Query query = new Query(taskBeanParentKey);
